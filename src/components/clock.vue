@@ -8,6 +8,7 @@
 import {onMounted} from "vue";
 
 export default {
+  name: 'clock',
   props: {},
   setup() {
     onMounted(() => {

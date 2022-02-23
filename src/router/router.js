@@ -1,18 +1,16 @@
 import {createRouter, createWebHistory} from 'vue-router'
-import clock from '../components/clock.vue'
-import card from '../components/card.vue'
 
 const routes = [
   {
     path: '/',
     name: 'clock',
-    components: clock
+    component: () => import('../components/clock.vue')
   },
   {
-    path: '/card',
-    name: 'card',
-    components: card
-  }
+    path: '/12',
+    name: 'ofCard',
+    component: () => import('../components/card.vue')
+  },
 ]
 
 const router = createRouter({
