@@ -7,10 +7,15 @@ const routes = [
     component: () => import('../components/clock.vue')
   },
   {
-    path: '/12',
-    name: 'ofCard',
+    path: '/card',
+    name: 'card',
     component: () => import('../components/card.vue')
   },
+  {
+    path: '/moveStar',
+    name: 'moveStar',
+    component: () => import('../components/moveStar.vue')
+  }
 ]
 
 const router = createRouter({
