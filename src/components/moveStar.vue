@@ -32,7 +32,7 @@
             this.r = r
 
             this.speedX = (Math.random()*2)* Math.pow(-1, Math.round(Math.random()))
-            this.speedY = (Math.random())* Math.pow(-1, Math.round(Math.random()))
+            this.speedY = Math.random()* Math.pow(-1, Math.round(Math.random()))
           }
           draw () {
             ctx.beginPath()
