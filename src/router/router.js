@@ -15,6 +15,16 @@ const routes = [
     path: '/moveStar',
     name: 'moveStar',
     component: () => import('../components/moveStar.vue')
+  },
+  {
+    path: '/snake',
+    name: 'snake',
+    component: () => import('../components/snake.vue')
+  },
+  {
+    path: '/disappear',
+    name: 'disappear',
+    component: () => import('../components/disappear.vue')
   }
 ]
 
