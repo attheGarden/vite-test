@@ -25,6 +25,11 @@ const routes = [
     path: '/disappear',
     name: 'disappear',
     component: () => import('../components/disappear.vue')
+  },
+  {
+    path: '/simpleTest',
+    name: 'simpleTest',
+    component: () => import('../components/simpleTest.vue')
   }
 ]
 
