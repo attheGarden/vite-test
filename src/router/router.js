@@ -30,6 +30,11 @@ const routes = [
     path: '/simpleTest',
     name: 'simpleTest',
     component: () => import('../components/simpleTest.vue')
+  },
+  {
+    path: '/webglTest',
+    name: 'webglTest',
+    component: () => import('../components/webGLTest.vue')
   }
 ]
 
