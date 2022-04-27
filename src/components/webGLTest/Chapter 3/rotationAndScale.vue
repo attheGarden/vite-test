@@ -7,6 +7,7 @@
 <script>
 import {onMounted} from "vue";
 import {initShaders} from "../../../utils/wegblUtils";
+import {Matrix4} from "../../../utils/cuon-matrix"
 
 export default {
   name: "rotationAndScale",
@@ -18,8 +19,8 @@ export default {
       gl.clearColor(0.0, 0.0, 0.0, 1.0)
       gl.clear(gl.COLOR_BUFFER_BIT)
       // rotateTriangle(gl);
-      // rotateTriangleMatrix(gl);
-      scaleTriangleMatrix(gl)
+      rotateTriangleMatrix(gl);
+      // scaleTriangleMatrix(gl)
     })
 
     const initVertexBuffers = (gl, vertices, n) => {
@@ -116,15 +117,17 @@ export default {
       const cosB = Math.cos(radian);
       const sinB = Math.sin(radian);
 
-      const xformMatrix = new Float32Array([
-        cosB, sinB, 0.0, 0.0,
-        -sinB, cosB, 0.0, 0.0,
-        0.0, 0.0, 1.0, 0.0,
-        0.0, 0.0, 0.0, 1.0
-      ])
+      // const xformMatrix = new Float32Array([
+      //   cosB, sinB, 0.0, 0.0,
+      //   -sinB, cosB, 0.0, 0.0,
+      //   0.0, 0.0, 1.0, 0.0,
+      //   0.0, 0.0, 0.0, 1.0
+      // ])
+      const xformMatrix = new Matrix4();
+      xformMatrix.setRotate(angle, 0,0,1);
 
       const u_xformMatrix = gl.getUniformLocation(gl.program, 'u_xformMatrix');
-      gl.uniformMatrix4fv(u_xformMatrix, false, xformMatrix);
+      gl.uniformMatrix4fv(u_xformMatrix, false, xformMatrix.elements);
 
       gl.drawArrays(gl.TRIANGLES, 0, n);
     }
@@ -152,6 +155,7 @@ export default {
       const n = initVertexBuffers(gl, vertices, 3);
 
       const sx = 1.0, sy = 1.5, sz = 1.0;
+      // webgl 是列主序的
       const xformMatrix = new Float32Array([
           sx, 0.0, 0.0, 0.0,
           0.0, sy, 0.0, 0.0,
