@@ -34,7 +34,12 @@ const routes = [
   {
     path: '/webglTest',
     name: 'webglTest',
-    component: () => import('../components/webGLTest.vue')
+    component: () => import('../components/webGLTest/webGLTest.vue')
+  },
+  {
+    path: '/webglTest3',
+    name: 'webglTest3',
+    component: () => import('../components/webGLTest/Chapter 3/rotationAndScale.vue')
   }
 ]
 
