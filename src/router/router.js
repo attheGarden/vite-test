@@ -47,9 +47,19 @@ const routes = [
     component: () => import('../components/webGLTest/Chapter 4/modelTransform.vue')
   },
   {
-    path: '/webglTest5',
-    name: 'webglTest5',
+    path: '/webglTest5_1',
+    name: 'webglTest5_1',
     component: () => import('../components/webGLTest/Chapter 5/test1.vue')
+  },
+  {
+    path: '/webglTest5_2',
+    name: 'webglTest5_2',
+    component: () => import('../components/webGLTest/Chapter 5/multiAttributeColor.vue')
+  },
+  {
+    path: '/webglTest5_3',
+    name: 'webglTest5_3',
+    component: () => import('../components/webGLTest/Chapter 5/textureOperation.vue')
   }
 ]
 
