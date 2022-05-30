@@ -60,6 +60,16 @@ const routes = [
     path: '/webglTest5_3',
     name: 'webglTest5_3',
     component: () => import('../components/webGLTest/Chapter 5/textureOperation.vue')
+  },
+  {
+    path: '/webglTest7_1',
+    name: 'webglTest7_1',
+    component: () => import('../components/webGLTest/Chapter 7/lookAtTriangles.vue')
+  },
+  {
+    path: '/webglTest7_2',
+    name: 'webglTest7_2',
+    component: () => import('../components/webGLTest/Chapter 7/perspectiveView.vue')
   }
 ]
 
