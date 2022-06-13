@@ -17,9 +17,9 @@ export default {
       const canvas = document.getElementById('webgl')
       gl = canvas.getContext('webgl')
       gl.clearColor(255.0, 0, 255.0, 1.0)
-      // test1(gl);
+      test1(gl);
       // test2(gl);
-      test4(gl);
+      // test4(gl);
     })
 
     const test1 = gl => {
@@ -43,17 +43,17 @@ export default {
       initShaders(gl, VSHADER_SOURCE, FSHADER_SOURCE)
       const initVertexBuffers = gl => {
         const verticesColors = new Float32Array([
-          0.0, 0.5, -0.4, 0.4, 1.0, 0.4, // The back green one
-          -0.5, -0.5, -0.4, 0.4, 1.0, 0.4,
-          0.5, -0.5, -0.4, 1.0, 0.4, 0.4,
+          0.0, 0.5, 0.0, 0.4, 1.0, 0.4, // The back green one
+          -0.5, -0.5, 0.0, 0.4, 1.0, 0.4,
+          0.5, -0.5, 0.0, 1.0, 0.4, 0.4,
 
           0.5, 0.4, -0.2, 1.0, 0.4, 0.4, // The middle yellow one
           -0.5, 0.4, -0.2, 1.0, 1.0, 0.4,
           0.0, -0.6, -0.2, 1.0, 1.0, 0.4,
 
-          0.0, 0.5, 0.0, 0.4, 0.4, 1.0,  // The front blue one
-          -0.5, -0.5, 0.0, 0.4, 0.4, 1.0,
-          0.5, -0.5, 0.0, 1.0, 0.4, 0.4,
+          0.0, 0.5, -0.4, 0.4, 0.4, 1.0,  // The front blue one
+          -0.5, -0.5, -0.4, 0.4, 0.4, 1.0,
+          0.5, -0.5, -0.4, 1.0, 0.4, 0.4,
         ])
 
         const n = 9;

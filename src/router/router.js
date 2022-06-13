@@ -70,6 +70,16 @@ const routes = [
     path: '/webglTest7_2',
     name: 'webglTest7_2',
     component: () => import('../components/webGLTest/Chapter 7/perspectiveView.vue')
+  },
+  {
+    path: '/webglTest7_3',
+    name: 'webglTest7_3',
+    component: () => import('../components/webGLTest/Chapter 7/cube.vue')
+  },
+  {
+    path: '/webglTest8_1',
+    name: 'webglTest8_1',
+    component: () => import('../components/webGLTest/Chapter 8/lightCube.vue')
   }
 ]
 
