@@ -80,6 +80,11 @@ const routes = [
     path: '/webglTest8_1',
     name: 'webglTest8_1',
     component: () => import('../components/webGLTest/Chapter 8/lightCube.vue')
+  },
+  {
+    path: '/hudTest',
+    name: 'hudTest',
+    component: () => import('../components/webGLTest/HUDTest.vue')
   }
 ]
 
